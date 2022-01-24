@@ -24,9 +24,9 @@ mongoose
 app.use(cors());
 app.use(express.json());
 
-app.get("/server/test", () => {
-    console.log("test is successful");
-})
+app.get("/", (req, res) => { 
+    res.send("it is working!");
+  });
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
